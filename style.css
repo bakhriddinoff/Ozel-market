@@ -2,9 +2,85 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-.logo-img {
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.top-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.register {
+    width: 150px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: transparent;
+    border-radius: 50px;
+}
+
+.register:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+    box-shadow: inset 0 2px 4px rgba(0, 100, 0, 0.2), 0 4px 8px rgba(0, 150, 0, 0.3); 
+    transition: all 0.5s ;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.links:hover {
+    color: var(--accent-color);
+}
+
+.sign, .cart-img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-img {
+    width: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.logo-img  {
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -18,24 +94,7 @@
     --text-color: #6b6b6b;
     --number-color: #f60;
     --line-color: #d8d8d8;
-}
-
-*, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    max-width: 1440px;
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
+    --hover-color: rgb(11, 218, 0); 
 }
 
 .offers {
@@ -78,7 +137,7 @@ body {
 }
 
 .offers-number {
-    color: var(--number-color);
+    color: var(--accent-color);
     font-size: 36px;
     font-weight: 700;
 }
@@ -135,9 +194,9 @@ body {
 }
 
 .category-item:hover .category-icon {
-    border-color: var(--number-color);
-    background-color: rgba(255, 102, 0, 0.1);
-    color: var(--number-color);
+    border-color: var(--accent-color);
+    background-color: rgb(232, 255, 222);
+    color: var(--accent-color);
 }
 
 .category-label {
@@ -149,5 +208,5 @@ body {
 }
 
 .category-item:hover .category-label {
-    color: var(--number-color);
+    color: var(--accent-color);
 }
