@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZEL store</title>
+    <title>Uzum</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,27 +13,47 @@
 <body>
 
 
-    <!--HEADER  -->
-    <header>
-        <div class="top-header">
-            <div class="logo">
-                <img src="./imgs/logo.png" alt="logo" class="logo-img">
-                <span class="name">OZEL</span>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a class="cart links" href="#"><img class="cart-img" src="./imgs/cart.jpg" alt="cart">Cart</a></li>
-                    <li><a href="#" class="links"><img class="sign" src="./imgs/sign.jpg" alt="sign in">Sign in</a></li>
-                    <button class="register">Sign up</button>
-                </ul>
-            </nav>
+<!--HEADER  -->
+<header class="container">
+    <div class="top-header">
+        <div class="logo">
+            <img src="./imgs/logo.png" alt="logo" class="logo-img">
+            <span class="name">OZEL</span>
         </div>
-    </header>
+
+        <nav>
+            <ul>
+                <div class="language-selector zoom-element">
+                    <button class="current-lang zoom-element">Tilni tanlash <img class="translate zoom-element" src="./imgs/translate.jpg" alt="translate"></button>
+                    <ul class="language-dropdown hidden zoom-element">
+                        <li data-lang="uz"><img class="imgL zoom-element" src="./imgs/uzb.jpg" alt="">Uzb</li>
+                        <li data-lang="en"><img class="imgL zoom-element" src="./imgs/england.png" alt="">Eng</li>
+                        <li data-lang="ru"><img class="imgL zoom-element" src="imgs/russian.jpg" alt="">Rus</li>
+                    </ul>
+                </div>    
+                <li><a class="cart links" href="#"><img class="cart-img" src="./imgs/cart.jpg" alt="cart">Cart</a></li>
+                <li><a href="#" class="links"><img class="sign" src="./imgs/sign.jpg" alt="sign in">Sign in</a></li>
+                <button class="register">Sign up</button>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- SECTION1 -->
+
+<div class="section1 container">
+    <div class="hero">
+        <h1>The leading B2B ecommerce platform for <br> global trade</h1>
+        <form action="#">
+            <input type="email" name="email" id="email" placeholder="Enter your email address" class="email-input">
+            <button class="search">Search</button>
+        </form>
+    </div>
+</div> 
 
 
-<!--     section2 -->
-    <section class="offers">
+<!--SECTION2 -->
+    <section class="offers container">
         <div class="offers-heading">
             <h2>Explore millions of offerings tailored to your business needs</h2>
             <div class="offers-number-container">
@@ -126,5 +146,8 @@
             </div>
         </div>
     </section>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

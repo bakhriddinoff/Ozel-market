@@ -2,6 +2,87 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+
+:root {
+    --primary-color: #008080;
+    --accent-color: #2bff00;
+    --heading-color: #0A1F2B;
+    --secondary-heading:36px;
+    --text-color: #000;
+    --number-color: #f60;
+    --colored:#fff;
+    --every-heading:48px;
+    --normal-text: 24px;
+    --small-text: 16px;
+    --little-text: 16px;
+    --line-color: #ddd;
+}
+
+
+
+/* HEADER */
+header {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.name {
+    font-size: var(--every-heading);
+    font-weight: 600;
+    color: black;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+.register {
+    width: 150px;
+    height: 40px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: var(--small-text);
+    font-weight: 600;
+    border: transparent;
+    border-radius: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-img {
@@ -10,38 +91,81 @@
     border-radius: 10px;
 } 
 
-
-:root {
-    --primary-color: #008080;
-    --accent-color: #2BFF00;
-    --heading-color: #0A1F2B;
-    --text-color: #6b6b6b;
-    --number-color: #f60;
-    --line-color: #d8d8d8;
+.cart-img, .sign {
+    height: 30px;
 }
 
-*, html {
-    margin: 0;
+
+
+/* LANGUAGE SELECTOR */
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;
+    justify-self: center;
+    align-self: center;
+}
+
+.imgL {
+    width: 35px;
+    height: 20px;
+}
+
+.language-selector button {
+    background-color: black;
+    color: var(--colored);
+    border: 2px solid black;
+    font-size: var(--small-text);
+    cursor: pointer;
+}
+
+.language-dropdown {
+    position: absolute;
+    background-color: var(--colored);
+    list-style: none;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    max-width: 1440px;
-    margin: 0 auto;
-    min-height: 100vh;
+    margin: 5px 0 0 0;
+    border: 1px solid var(--line-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    width: 120px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
 }
 
+.language-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--normal-text);
+}
+
+.language-dropdown li:hover {
+    background-color: #f2f2f2;
+}
+
+.hidden {
+    display: none;
+}
+
+.current-lang {
+    z-index: 999;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+}
+
+
+/* SECTION2 */
 .offers {
     width: 100%;
     padding: 40px;
-    background-color: white;
 }
 
 .offers-heading {
@@ -54,7 +178,7 @@ body {
 
 .offers-heading h2 {
     width: 738px;
-    font-size: 44px;
+    font-size: var(--every-heading);
     font-weight: 700;
     color: var(--heading-color);
     line-height: 1.2;
@@ -79,7 +203,7 @@ body {
 
 .offers-number {
     color: var(--accent-color);
-    font-size: 36px;
+    font-size: var(--secondary-heading);
     font-weight: 700;
 }
 
@@ -88,12 +212,12 @@ body {
     position: absolute;
     left: -20px;
     top: -5px;
-    font-size: 55px;
+    font-size: var(--every-heading);
 }
 
 .offers-number-text {
     color: var(--text-color);
-    font-size: 14px;
+    font-size: var(--small-text);
     line-height: 1.4;
 }
 
@@ -122,13 +246,13 @@ body {
 .category-icon {
     width: 60px;
     height: 60px;
-    border: 1px solid var(--line-color);
+    border: 2px solid var(--line-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: var(--normal-text);
     color: #555;
     font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
     transition: all 0.3s ease;
@@ -141,8 +265,8 @@ body {
 }
 
 .category-label {
-    font-size: 0.9rem;
-    color: #333;
+    font-size: var(--small-text);
+    color: var(--text-color);
     line-height: 1.4;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -150,4 +274,38 @@ body {
 
 .category-item:hover .category-label {
     color: var(--accent-color);
+}
+
+form {
+    width: 650px;
+    height: 50px;
+    background-color: var(--line-color);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    width: 80%;
+    border-radius: 50px;
+    height: 45px;
+    border: transparent;
+}
+
+::placeholder {
+    padding-left: 10px;
+    color: var(--text-color);
+}
+
+.search {
+    width: 15%;
+    border-radius: 50px;
+    height: 40px;
+    border: transparent;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: var(--small-text);
+    font-weight: bold;
 }
